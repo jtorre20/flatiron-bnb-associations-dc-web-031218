@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180412171302) do
+ActiveRecord::Schema.define(version: 20180412180922) do
 
   create_table "cities", force: :cascade do |t|
     t.string   "name"
@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 20180412171302) do
 
   create_table "listings", force: :cascade do |t|
     t.integer  "host_id"
-    t.integer  "guest_id"
     t.text     "address"
     t.string   "listing_type"
     t.string   "title"
@@ -46,7 +45,6 @@ ActiveRecord::Schema.define(version: 20180412171302) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "guest_id"
-    t.integer  "host_id"
   end
 
   create_table "reviews", force: :cascade do |t|

@@ -2,7 +2,7 @@ class Reservation < ActiveRecord::Base
   belongs_to :listing
   has_many :reviews
   # belongs_to :user
-  belongs_to :guest, :class_name => "User" as :trips
+  belongs_to :guest, :class_name => "User" 
   belongs_to :host, :class_name => "User"
 end
 
